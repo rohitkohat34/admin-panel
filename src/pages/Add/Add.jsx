@@ -75,8 +75,8 @@ const onSubmitHandler = async (event) => {
               <option value="Refrigerator">Refrigerator</option>
               <option value="Geyser">Geyser</option>
               <option value="Water Cooler">Water Cooler</option>
-              <option value="Water Cooler">Water Purifier</option>
-              <option value="Water Cooler">TV</option>
+              <option value="Water Purifier">Water Purifier</option>
+              <option value="Tv">TV</option>
             </select>
           </div>
           <div className='add-price flex-col'>
