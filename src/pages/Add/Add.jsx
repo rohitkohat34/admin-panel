@@ -10,7 +10,9 @@ const Add = ({url}) => {
     name:"",
     description:"",
     price:"",
+    discount: "",
     category:"AC"
+    
   })
 
 const onChangeHandler = (event) => {
@@ -25,6 +27,7 @@ const onSubmitHandler = async (event) => {
    formData.append("name",data.name)
    formData.append("description",data.description)
    formData.append("price",Number(data.price))
+   formData.append("discount",Number(data.discount))
    formData.append("category",data.category)
    formData.append("image",image)
    const response = await axios.post(`${url}/api/food/add`,formData);
@@ -33,7 +36,8 @@ const onSubmitHandler = async (event) => {
       name:"",
       description:"",
       price:"",
-      category:"Air-Conditioner"
+      discount: "",
+      category:"AC"
     })
     setImage(false)
     toast.success(response.data.message)
@@ -67,15 +71,21 @@ const onSubmitHandler = async (event) => {
             <select onChange={onChangeHandler} name='category'>
               <option value="Air-Conditioner">Air-Conditioner</option>
               <option value="Washing Machine">Washing Machine</option>
+              <option value="Deep Freezer">Deep Freezer</option>
               <option value="Refrigerator">Refrigerator</option>
               <option value="Geyser">Geyser</option>
               <option value="Water Cooler">Water Cooler</option>
-              
+              <option value="Water Cooler">Water Purifier</option>
+              <option value="Water Cooler">TV</option>
             </select>
           </div>
           <div className='add-price flex-col'>
             <p>Product Price</p>
             <input onChange={onChangeHandler} value={data.price} type='Number' name='price' placeholder='₹0' />
+          </div>
+          <div className='add-price flex-col'>
+            <p>Discount Price</p>
+            <input onChange={onChangeHandler} value={data.discount} type='Number' name='discount' placeholder='₹0' />
           </div>
         </div>
         <button type='submit' className='add-btn'>ADD</button>
