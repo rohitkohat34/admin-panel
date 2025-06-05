@@ -1,0 +1,90 @@
+.balance-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  
+  border-radius: 8px;
+ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.balance-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.no-balances {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.balance-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.balance-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  transition: background-color 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+.balance-item:hover {
+  background-color: #e9f5ff;
+}
+
+.order-id {
+  font-weight: 600;
+  color: #222;
+  flex: 1 1 40%;
+}
+
+.amount {
+  color: #444;
+  font-weight: 500;
+  flex: 1 1 30%;
+  text-align: center;
+}
+
+.status {
+  font-weight: 600;
+  flex: 1 1 25%;
+  text-align: right;
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: white;
+}
+
+/* Status colors */
+.status.paid {
+  background-color: #28a745; /* Green */
+}
+
+.status.pending {
+  background-color: #ffc107; /* Yellow */
+  color: #333;
+}
+
+.status.failed {
+  background-color: #dc3545; /* Red */
+}
+
+/* Add more statuses as needed */

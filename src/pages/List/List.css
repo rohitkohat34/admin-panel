@@ -6,24 +6,39 @@
   padding: 12px 15px;
   border: 1px solid #cacaca;
   font-size: 13px;
+  background-color: #fff;
 }
 
-.list-table-format title {
+/* Style for the title row */
+.list-table-format.title {
   background-color: #f9f9f9;
+  font-weight: bold;
+  text-align: left;
 }
 
+/* Image size */
 .list-table-format img {
   width: 50px;
+  height: auto;
+  object-fit: cover;
 }
 
-@media (max-width:600px) {
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
   .list-table-format {
     grid-template-columns: 1fr 3fr 1fr;
     gap: 15px;
-
+    font-size: 12px;
+    padding: 10px;
   }
+
+  /* Hide the title row on small screens */
   .list-table-format.title {
     display: none;
   }
-}
 
+  /* Reduce image size on mobile */
+  .list-table-format img {
+    width: 40px;
+  }
+}
